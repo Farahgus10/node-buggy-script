@@ -25,7 +25,7 @@ linesInSource.forEach(line => {
   // write the file and it's contents
   fs.writeFileSync(
     newFilePath,
-    contentArr.join(),
+    contentArr.join(' '),    // <---- error: contentArr was missing .join(' ')
     { flag: 'w+', encoding: 'utf-8' }
   )
 })
